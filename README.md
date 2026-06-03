@@ -1,20 +1,32 @@
-# E-commerce Product API
+# 🛒 E-commerce Product API
 
-API de catálogo de produtos para e-commerce com categorias, controle de estoque, busca por faixa de preço e SKU único por produto.
+Catálogo de produtos para e-commerce com categorias, estoque e SKU único.
 
-## Tecnologias
-Java 17 · Spring Boot 3.2 · Spring Data JPA · PostgreSQL · Maven · Swagger/OpenAPI
+## 📋 Sobre o Projeto
 
-## Funcionalidades
-- CRUD de produtos e categorias
-- SKU único por produto
-- Busca por nome e filtro por faixa de preço via JPQL
-- Controle de estoque com endpoint dedicado
-- Associação produto ↔ categoria
+API de catálogo de produtos para lojas virtuais. Cada produto tem categorias, código SKU único, controle de estoque, preço e status de disponibilidade. Suporta busca por nome e filtragem por categoria.
 
-## Como Executar
-```bash
-mvn spring-boot:run
-# Acesse: http://localhost:8095/swagger-ui.html
-```
-**Patryck Martins Langsdorff** — Java Back End Developer Junior | [LinkedIn](https://www.linkedin.com/in/patryck-martins-langsdorff)
+## ✨ Funcionalidades
+
+- ✅ Cadastrar produtos com SKU único
+- ✅ Organizar por categorias hierárquicas
+- ✅ Controle de estoque por produto
+- ✅ Busca de produtos por nome (busca parcial)
+- ✅ Filtrar por categoria
+- ✅ Filtrar por disponibilidade (em estoque)
+- ✅ Atualizar preço e quantidade em estoque
+- ✅ Ativar/desativar produto
+
+## 🔗 Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET/POST | `/api/products` | Listar / Cadastrar produto |
+| GET/PUT/DELETE | `/api/products/{id}` | Gerenciar produto |
+| GET | `/api/products/search?name=camiseta` | Buscar por nome |
+| GET | `/api/products/category/{id}` | Filtrar por categoria |
+| GET/POST | `/api/categories` | Gerenciar categorias |
+
+## 🛠️ Tecnologias
+
+- Java 17 · Spring Boot 3.2 · PostgreSQL · Maven · Lombok
